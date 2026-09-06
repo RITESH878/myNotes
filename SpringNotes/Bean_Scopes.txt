@@ -1,0 +1,57 @@
+1. Singleton
+	- Single Bean per IOC Container.
+	- Default scope for a bean
+	- Eagerly initialized.
+
+2. Prototype 
+	- New object every time
+	- @Scope("prototype")
+	- Lazily initialized.
+3. Request
+	- One Bean per http Request
+	- @Scope("request")
+	- Lazily initialized
+
+	edge case :
+		1. using Request scoped dependency in a singleton scoped class we'll cause compile time error 
+		solution - use proxyMode attribute in request scope definition 
+			
+4. Session
+	-One Bean per session
+5. Application
+	- One Bean across multiple IOC's (might be created cause of sessions)
+
+
+-------------------------------------------------
+
+@Value("${param_var_name}")
+	- can set this property name from application.properties file.
+
+@Qualifier 
+	- interview question on real life example to create order (offline/Online Order)
+
+
+
+@ConditionalOnProperty
+	- Create this bean only if a specific property exists and optionally has a specific value.
+	e.g. @ConditionalOnProperty( prefix = "feature.payment", name = "enabled", havingValue = "true", matchIfMissing = false )
+	- Set this value through application.properties. e.g. prefix.name=true;
+
+	- Enabling/disabling features
+	- Switching implementations
+	- Optional integrations (Redis, Kafka, Email, etc.)
+
+
+
+
+@Autowired(Required = false)
+	- Required annotation set to false tells IOC to ignore if the bean is not created due to false condition in @ConditionalOnProperty
+	- Must use with @ConditionalOnProperty
+
+
+
+
+
+
+
+

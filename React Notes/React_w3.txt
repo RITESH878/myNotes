@@ -1,0 +1,4 @@
+Cmd to create a new vite project
+npm create vite@latest my-react-app -- --template react
+============
+

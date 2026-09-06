@@ -1,0 +1,25 @@
+Random Topics to Learn
+
+==========
+
+
+1. Create a simple project with sign up and sign in functionality along with (JWT / Session based login)
+
+2. Create a simple eccomerse website along with Admin Panel and role based Authentication 
+
+3. integrate payment gateway system with webhooks
+
+4. integrate Push notifications.
+
+5. deploy this on aws front end and backend with remote config
+
+extras : 
+- implement elastic search
+- recommendation system based on user shopping interest
+==============
+
+
+Vending Machine - Low Level Design Interview Question | System Design Class 12
+Genie Ashwani
+
+

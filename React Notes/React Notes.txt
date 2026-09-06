@@ -1,0 +1,20 @@
+cmds React
+- npm create vite
+- npm create vite@latest
+
+===========
+Import export in js
+default import / export - without braces
+named import / export - use {name_here}
+
+==========
+Values that react does not render in DOM
+- Nan
+- false
+- null
+- undefined
+
+but 0 and "" (empty strings are exceptions)
+
+=============
+Events in React 

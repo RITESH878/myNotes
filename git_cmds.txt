@@ -1,0 +1,232 @@
+```bash
+# =========================
+# SETUP / INITIALIZATION
+# =========================
+
+git init
+# Initialize a Git repository in the current folder
+
+git clone <repo-url>
+# Download/clone an existing GitHub repository
+
+git config --global user.name "Your Name"
+# Set your Git username
+
+git config --global user.email "you@example.com"
+# Set your Git email
+
+
+# =========================
+# CHECK STATUS / INFO
+# =========================
+
+git status
+# Show modified, staged, and untracked files
+
+git log
+# Show commit history
+
+git log --oneline
+# Show compact commit history
+
+git branch
+# Show local branches
+
+git branch -a
+# Show local + remote branches
+
+git remote -v
+# Show connected remote repositories
+
+
+# =========================
+# ADD / STAGE FILES
+# =========================
+
+git add <file>
+# Stage a specific file
+
+git add .
+# Stage all changed/untracked files in current directory
+
+git add -A
+# Stage all changes in the entire repository
+
+git restore --staged <file>
+# Unstage a file (keep the file on your computer)
+
+git rm --cached <file>
+# Remove file from Git tracking/staging but keep it locally
+
+git rm <file>
+# Delete file from computer + Git
+
+
+# =========================
+# COMMIT
+# =========================
+
+git commit -m "message"
+# Save staged changes as a commit
+
+git commit -am "message"
+# Stage modified tracked files + commit
+# Does NOT include new/untracked files
+
+git commit --amend -m "new message"
+# Change the most recent commit message
+
+
+# =========================
+# BRANCHES
+# =========================
+
+git branch <branch-name>
+# Create a new branch
+
+git switch <branch-name>
+# Switch to a branch
+
+git switch -c <branch-name>
+# Create + switch to a new branch
+
+git checkout <branch-name>
+# Older way to switch branches
+
+git branch -d <branch-name>
+# Delete a local branch
+
+git branch -M main
+# Rename current branch to main
+
+
+# =========================
+# MERGING
+# =========================
+
+git merge <branch-name>
+# Merge another branch into current branch
+
+git merge --abort
+# Cancel an ongoing merge
+
+
+# =========================
+# GITHUB / REMOTE
+# =========================
+
+git remote add origin <repo-url>
+# Connect local repo to GitHub
+
+git push -u origin main
+# Push main branch to GitHub and set upstream
+
+git push
+# Push committed changes to GitHub
+
+git push origin <branch-name>
+# Push a specific branch
+
+git pull
+# Download + merge latest changes from remote
+
+git fetch
+# Download remote changes without merging
+
+git pull origin main
+# Pull latest main branch from GitHub
+
+
+# =========================
+# UNDO / REVERT
+# =========================
+
+git restore <file>
+# Discard local changes in a file
+# WARNING: changes are lost
+
+git reset <file>
+# Unstage a file
+
+git reset --soft HEAD~1
+# Undo last commit but keep changes staged
+
+git reset --mixed HEAD~1
+# Undo last commit and unstage changes
+
+git reset --hard HEAD~1
+# Undo last commit + DELETE changes
+# WARNING: dangerous
+
+git revert <commit-id>
+# Create a new commit that reverses an old commit
+
+
+# =========================
+# TEMPORARILY SAVE CHANGES
+# =========================
+
+git stash
+# Temporarily save uncommitted changes
+
+git stash pop
+# Restore the latest stashed changes
+
+git stash list
+# Show all stashes
+
+git stash apply
+# Apply latest stash without removing it
+
+
+# =========================
+# DIFF / COMPARISON
+# =========================
+
+git diff
+# Show unstaged changes
+
+git diff --staged
+# Show staged changes
+
+git diff <branch1> <branch2>
+# Compare two branches
+
+
+# =========================
+# REMOTE BRANCHES
+# =========================
+
+git push -u origin <branch>
+# Push new branch to GitHub
+
+git branch -r
+# Show remote branches
+
+git fetch origin
+# Update information about remote branches
+
+git switch -c <branch> origin/<branch>
+# Create local branch from remote branch
+
+
+# =========================
+# COMMON DAILY WORKFLOW
+# =========================
+
+git status
+git add .
+git commit -m "Describe changes"
+git push
+
+# Get latest changes before working:
+git pull
+
+# Create feature branch:
+git switch -c feature/login
+
+# After finishing:
+git add .
+git commit -m "Add login feature"
+git push -u origin feature/login
+```

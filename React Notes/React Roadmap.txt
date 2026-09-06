@@ -1,0 +1,123 @@
+React Roadmap
+----
+chat link - 
+https://chatgpt.com/share/6a983707-7cb4-83ee-92b4-7500eea2cea1
+
+================
+
+
+React fundamentals
+       ↓
+Components + Props + State
+       ↓
+Events + Forms
+       ↓
+Hooks
+       ↓
+API integration
+       ↓
+Routing
+       ↓
+Authentication
+       ↓
+State management
+
+==============
+
+✅ WATCH
+1. React Introduction - done
+2. JSX - done
+3. Components - done
+4. Props - done
+5. useState - done
+6. Events
+7. Forms
+8. useEffect
+9. API Calling
+10. React Router
+11. Context API
+
+🟡 WATCH LATER
+12. useRef
+13. useMemo
+14. useCallback
+15. Redux
+16. Tailwind CSS in React
+17. Pass events as props
+18. Event Bubbling (child to parent - ex. card having buy button for a product card)
+=======
+
+
+
+
+Need to google further
+++++
+
+Access:
+
+user.name
+user["name"]
+
+---
+
+Array methods — VERY important
+
+Especially:
+
+map()
+filter()
+find()
+some()
+every()
+reduce()
+forEach()
+
+React uses map() constantly.
+
+users.map(user => (
+    <div>{user.name}</div>
+))
+
+---
+
+Promises
+
+Since you're a backend developer, this should be easy.
+
+fetch(url)
+    .then(response => response.json())
+    .then(data => console.log(data));
+
+And:
+
+async function getUsers() {
+    const response = await fetch(url);
+    const data = await response.json();
+}
+
+
+-----
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
